@@ -4,7 +4,7 @@ import random
 import math
 
 #valor exemplificativo
-new = 0.2
+alpha = 0.2
 
 def make(nx, nz, ny):
     """Funcao que cria, inicializa e devolve uma rede neuronal, incluindo
