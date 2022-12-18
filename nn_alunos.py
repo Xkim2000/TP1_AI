@@ -136,8 +136,31 @@ def build_sets(f):
     o padrao de treino. Estes padroes são colocados numa lista 
     Finalmente, devolve duas listas, uma com os primeiros 67 padroes (conjunto de treino)
     e a segunda com os restantes (conjunto de teste)"""
-    
-    pass
+
+    lista_linhas = []
+    animais = []
+    padroes = []
+
+    with open(f, encoding='UTF-8') as file:
+        linhas = file.readlines()
+        for linha in linhas:
+            lista_linhas.append(linha.strip().split('\n'))
+
+        for linha in lista_linhas:
+            animais.append(linha[0].replace('[', "").replace(']', "").split(','))
+
+        #Converter atributos binários extraidos em str para valores inteiros
+        for animal in animais:
+            for idxAtributo in range(len(animal)):
+                if len(animal[idxAtributo]) == 1:
+                    animal[idxAtributo] = int(animal[idxAtributo])
+
+        padroes = translate(animais)
+        training_set = padroes[0:68]
+        test_set = padroes[68:len(padroes)]
+
+        return training_set, test_set
+
 
 
 def translate(lista):
@@ -150,8 +173,47 @@ def translate(lista):
     padrao_de_saida e uma lista de 0 e 1 que representa o tipo do animal. Tem 7 posicoes e a unica
     que estiver a 1 corresponde ao tipo do animal. E.g., [0 0 1 0 0 0 0] -> reptile.
     """
-    
-    pass
+
+    lista_animais_formatados =[]
+    tipo_animal = ['mammal', 'bird', 'reptile', 'fish', 'amphibian', 'insect', 'invertebrate']
+
+    for animal_n_formatado in lista:
+        animal_formatado = [animal_n_formatado[0]]
+        lista_atributos = []
+        for idxAtributo in range(1, 13):
+            lista_atributos.append(animal_n_formatado[idxAtributo])
+
+        #formatar nº pernas
+        for i in range(10):
+            if i == animal_n_formatado[13]:
+                lista_atributos.append(1)
+            else:
+                lista_atributos.append(0)
+
+        lista_atributos.append(animal_n_formatado[14])
+        lista_atributos.append(animal_n_formatado[15])
+        lista_atributos.append(animal_n_formatado[16])
+        animal_formatado.append(lista_atributos)
+
+        animal_formatado.append(animal_n_formatado[-1])
+        # print(len(animal_formatado))
+
+        lista_tipo_animal = []
+        indice_tipo_animal = int()
+        if animal_n_formatado[-1] in tipo_animal:
+            indice_tipo_animal = tipo_animal.index(animal_n_formatado[-1])
+        for i in range(7):
+            if i == indice_tipo_animal:
+                lista_tipo_animal.append(1)
+            else:
+                lista_tipo_animal.append(0)
+
+        animal_formatado.append(lista_tipo_animal)
+        # print(animal_formatado)
+        lista_animais_formatados.append(animal_formatado)
+
+    return lista_animais_formatados
+
         
 
 def train_zoo(training_set):
@@ -177,3 +239,4 @@ def test_zoo(net, test_set):
 if __name__ == "__main__":
     train_and()
     #run()
+    # build_sets("zoo.txt")
