@@ -5,6 +5,13 @@ import math
 
 #valor exemplificativo
 alpha = 0.2
+tipo_animal = ['mammal', 'bird', 'reptile', 'fish', 'amphibian', 'insect', 'invertebrate']
+
+
+#TODO Passar parametros por argumento
+conf = [11, 27, 53]
+alphas = [0.2, 0.5, 0.7]
+iteracoes = [100, 200, 300]
 
 def make(nx, nz, ny):
     """Funcao que cria, inicializa e devolve uma rede neuronal, incluindo
@@ -71,8 +78,8 @@ def update(nn):
     """funcao que recebe uma rede com as activacoes e erros calculados e
     actualiza as listas de pesos"""
     
-    nn['wzx'] = [[w+x*nn['dz'][i]*alpha for w, x in zip(nn['wzx'][i], nn['x'])] for i in range(nn['nz'])]
-    nn['wyz'] = [[w+z*nn['dy'][i]*alpha for w, z in zip(nn['wyz'][i], nn['z'])] for i in range(nn['ny'])]
+    nn['wzx'] = [[w+x*nn['dz'][i]*alphas[2] for w, x in zip(nn['wzx'][i], nn['x'])] for i in range(nn['nz'])]
+    nn['wyz'] = [[w+z*nn['dy'][i]*alphas[2] for w, z in zip(nn['wyz'][i], nn['z'])] for i in range(nn['ny'])]
     
 
 def iterate(i, nn, input, output):
@@ -83,6 +90,8 @@ def iterate(i, nn, input, output):
     error(nn, output)
     update(nn)
     print('%03i: %s -----> %s : %s' %(i, input, output, nn['y']))
+
+    add_line_to_file('test.txt', '%03i: %s -----> %s : %s' %(i, input, output, nn['y']) + '\n')
     
 
 
@@ -124,6 +133,8 @@ def train_xor():
 def run():
     """Funcao principal do nosso programa, cria os conjuntos de treino e teste, chama
     a funcao que cria e treina a rede e, por fim, a funcao que a treina"""
+
+    test_zoo(train_zoo(build_sets("zoo.txt")[0]), build_sets("zoo.txt")[1])
     
     pass
     
@@ -175,7 +186,6 @@ def translate(lista):
     """
 
     lista_animais_formatados =[]
-    tipo_animal = ['mammal', 'bird', 'reptile', 'fish', 'amphibian', 'insect', 'invertebrate']
 
     for animal_n_formatado in lista:
         animal_formatado = [animal_n_formatado[0]]
@@ -218,14 +228,21 @@ def translate(lista):
 
 def train_zoo(training_set):
     """cria a rede e chama a funçao iterate para a treinar. Use 300 iteracoes"""
-    
-    pass
+    net = make(len(training_set[0][1]), conf[2], len(training_set[0][-1]))
+    for i in range(300):
+        for animal in training_set:
+            iterate(i, net, animal[1], animal[-1])
+
+    return net
 
 def retranslate(out):
     """recebe o padrao de saida da rede e devolve o tipo de animal corresponte.
     Devolve o tipo de animal corresponde ao indice da saida com maior valor."""
-    
-    pass
+
+    # idx = out.index(max(out))
+    # tipo = tipo_animal[idx]
+
+    return tipo_animal[out.index(max(out))]
 
 def test_zoo(net, test_set):
     """Funcao que avalia a precisao da rede treinada, utilizando o conjunto de teste.
@@ -236,7 +253,14 @@ def test_zoo(net, test_set):
     
     pass
 
+def add_line_to_file(file, str):
+    with open(file, 'a') as file:
+        file.write(str)
+
+
 if __name__ == "__main__":
-    train_and()
-    #run()
+    #train_and()
+    run()
     # build_sets("zoo.txt")
+    # train_zoo(build_sets("zoo.txt")[0])
+    # test_zoo(train_zoo(build_sets("zoo.txt")[0]), build_sets("zoo.txt")[1])
