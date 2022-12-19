@@ -250,7 +250,20 @@ def test_zoo(net, test_set):
     do animal que corresponde ao maior valor da lista de saida. O tipo determinado
     pela rede deve ser comparado com o tipo real, sendo contabilizado o número
     de respostas corretas. A função calcula a percentagem de respostas corretas"""
-    
+    numero_total_test_set = len(test_set)
+    numero_acertos = 0
+    i = 0
+    for animal in test_set:
+        forward(net, animal[1])
+        print(net['y'])
+        tipo =  retranslate(net['y'])
+        print(str(i) + " TIPO: " + tipo)
+        i = i+1
+        if tipo == animal[2]:
+            numero_acertos += 1
+
+    taxa_acertos =round((numero_acertos/numero_total_test_set) * 100, 2)
+    print("TAXA DE ACERTO: " + str(taxa_acertos))
     pass
 
 def add_line_to_file(file, str):
