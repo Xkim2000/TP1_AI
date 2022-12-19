@@ -1,0 +1,72 @@
+Configuração 1: 
+  Alpha 1: 
+      Interação 100: 
+		TAXA DE ACERTO: 78.79
+      Interação 200: 
+		TAXA DE ACERTO: 78.79
+      Interação 300: 
+		TAXA DE ACERTO: 78.79
+Configuração 1: 
+  Alpha 2: 
+      Interação 100: 
+		TAXA DE ACERTO: 81.82
+      Interação 200: 
+		TAXA DE ACERTO: 78.79
+      Interação 300: 
+		TAXA DE ACERTO: 81.82
+Configuração 1: 
+  Alpha 3: 
+      Interação 100: 
+		TAXA DE ACERTO: 78.79
+      Interação 200: 
+		TAXA DE ACERTO: 81.82
+      Interação 300: 
+		TAXA DE ACERTO: 81.82
+Configuração 2: 
+  Alpha 1: 
+      Interação 100: 
+		TAXA DE ACERTO: 78.79
+      Interação 200: 
+		TAXA DE ACERTO: 81.82
+      Interação 300: 
+		TAXA DE ACERTO: 81.82
+Configuração 2: 
+  Alpha 2: 
+      Interação 100: 
+		TAXA DE ACERTO: 81.82
+      Interação 200: 
+		TAXA DE ACERTO: 81.82
+      Interação 300: 
+		TAXA DE ACERTO: 81.82
+Configuração 2: 
+  Alpha 3: 
+      Interação 100: 
+		TAXA DE ACERTO: 81.82
+      Interação 200: 
+		TAXA DE ACERTO: 81.82
+      Interação 300: 
+		TAXA DE ACERTO: 81.82
+Configuração 3: 
+  Alpha 1: 
+      Interação 100: 
+		TAXA DE ACERTO: 78.79
+      Interação 200: 
+		TAXA DE ACERTO: 81.82
+      Interação 300: 
+		TAXA DE ACERTO: 81.82
+Configuração 3: 
+  Alpha 2: 
+      Interação 100: 
+		TAXA DE ACERTO: 81.82
+      Interação 200: 
+		TAXA DE ACERTO: 81.82
+      Interação 300: 
+		TAXA DE ACERTO: 81.82
+Configuração 3: 
+  Alpha 3: 
+      Interação 100: 
+		TAXA DE ACERTO: 81.82
+      Interação 200: 
+		TAXA DE ACERTO: 81.82
+      Interação 300: 
+		TAXA DE ACERTO: 81.82
