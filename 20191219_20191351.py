@@ -1,4 +1,7 @@
-"""Colocar o nome dos elementos do grupo"""
+"""
+Joaquim Francisco Carvalho Miguel
+Pedro Gonçalves Mendonça
+"""
 
 import random
 import math
@@ -134,90 +137,92 @@ def run():
     """Funcao principal do nosso programa, cria os conjuntos de treino e teste, chama
     a funcao que cria e treina a rede e, por fim, a funcao que a treina"""
 
-    #test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[2], iteracoes[0]), build_sets("zoo.txt")[1])
-
     #Configuração 1
-    add_line_to_file("test.txt", "Configuração 1: \n" )
-    add_line_to_file("test.txt", "  Alpha 1: \n")
-    add_line_to_file("test.txt", "      Interação 100: \n")
+    add_line_to_file("test.txt", "Configuração 1 ( "+str(conf[0])+" Unidades Camada Escondida): \n" )
+    add_line_to_file("test.txt", "  Alpha 1 ("+str(alphas[0])+"): \n")
+    add_line_to_file("test.txt", "      Interação "+str(iteracoes[0])+": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[0], iteracoes[0], alphas[0]), build_sets("zoo.txt")[1])
-    add_line_to_file("test.txt", "      Interação 200: \n")
+    add_line_to_file("test.txt", "      Interação "+str(iteracoes[1])+": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[0], iteracoes[1], alphas[0]), build_sets("zoo.txt")[1])
-    add_line_to_file("test.txt", "      Interação 300: \n")
+    add_line_to_file("test.txt", "      Interação "+str(iteracoes[2])+": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[0], iteracoes[2], alphas[0]), build_sets("zoo.txt")[1])
 
-    add_line_to_file("test.txt", "Configuração 1: \n")
-    add_line_to_file("test.txt", "  Alpha 2: \n")
-    add_line_to_file("test.txt", "      Interação 100: \n")
+    add_line_to_file("test.txt", "\n" )
+    add_line_to_file("test.txt", "  Alpha 2 ("+str(alphas[1])+"): \n")
+    add_line_to_file("test.txt", "      Interação "+str(iteracoes[0])+": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[0], iteracoes[0], alphas[1]), build_sets("zoo.txt")[1])
-    add_line_to_file("test.txt", "      Interação 200: \n")
+    add_line_to_file("test.txt", "      Interação " + str(iteracoes[1]) + ": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[0], iteracoes[1], alphas[1]), build_sets("zoo.txt")[1])
-    add_line_to_file("test.txt", "      Interação 300: \n")
+    add_line_to_file("test.txt", "      Interação "+str(iteracoes[2])+": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[0], iteracoes[2], alphas[1]), build_sets("zoo.txt")[1])
 
-    add_line_to_file("test.txt", "Configuração 1: \n")
-    add_line_to_file("test.txt", "  Alpha 3: \n")
-    add_line_to_file("test.txt", "      Interação 100: \n")
+    add_line_to_file("test.txt", "\n" )
+    add_line_to_file("test.txt", "  Alpha 3 ("+str(alphas[2])+"): \n")
+    add_line_to_file("test.txt", "      Interação "+str(iteracoes[0])+": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[0], iteracoes[0], alphas[2]), build_sets("zoo.txt")[1])
-    add_line_to_file("test.txt", "      Interação 200: \n")
+    add_line_to_file("test.txt", "      Interação " + str(iteracoes[1]) + ": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[0], iteracoes[1], alphas[2]), build_sets("zoo.txt")[1])
-    add_line_to_file("test.txt", "      Interação 300: \n")
+    add_line_to_file("test.txt", "      Interação "+str(iteracoes[2])+": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[0], iteracoes[2], alphas[2]), build_sets("zoo.txt")[1])
+    add_line_to_file("test.txt", "\n")
+    add_line_to_file("test.txt", "\n")
 
     # Configuração 2
-    add_line_to_file("test.txt", "Configuração 2: \n")
-    add_line_to_file("test.txt", "  Alpha 1: \n")
-    add_line_to_file("test.txt", "      Interação 100: \n")
+    add_line_to_file("test.txt", "Configuração 2 ( "+str(conf[1])+" Unidades Camada Escondida): \n" )
+    add_line_to_file("test.txt", "  Alpha 1 ("+str(alphas[0])+"): \n")
+    add_line_to_file("test.txt", "      Interação "+str(iteracoes[0])+": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[1], iteracoes[0], alphas[0]), build_sets("zoo.txt")[1])
-    add_line_to_file("test.txt", "      Interação 200: \n")
+    add_line_to_file("test.txt", "      Interação " + str(iteracoes[1]) + ": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[1], iteracoes[1], alphas[0]), build_sets("zoo.txt")[1])
-    add_line_to_file("test.txt", "      Interação 300: \n")
+    add_line_to_file("test.txt", "      Interação "+str(iteracoes[2])+": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[1], iteracoes[2], alphas[0]), build_sets("zoo.txt")[1])
 
-    add_line_to_file("test.txt", "Configuração 2: \n")
-    add_line_to_file("test.txt", "  Alpha 2: \n")
-    add_line_to_file("test.txt", "      Interação 100: \n")
+    add_line_to_file("test.txt", "\n" )
+    add_line_to_file("test.txt", "  Alpha 2 ("+str(alphas[1])+"): \n")
+    add_line_to_file("test.txt", "      Interação "+str(iteracoes[0])+": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[1], iteracoes[0], alphas[1]), build_sets("zoo.txt")[1])
-    add_line_to_file("test.txt", "      Interação 200: \n")
+    add_line_to_file("test.txt", "      Interação " + str(iteracoes[1]) + ": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[1], iteracoes[1], alphas[1]), build_sets("zoo.txt")[1])
-    add_line_to_file("test.txt", "      Interação 300: \n")
+    add_line_to_file("test.txt", "      Interação "+str(iteracoes[2])+": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[1], iteracoes[2], alphas[1]), build_sets("zoo.txt")[1])
 
-    add_line_to_file("test.txt", "Configuração 2: \n")
-    add_line_to_file("test.txt", "  Alpha 3: \n")
-    add_line_to_file("test.txt", "      Interação 100: \n")
+    add_line_to_file("test.txt", "\n" )
+    add_line_to_file("test.txt", "  Alpha 3 ("+str(alphas[2])+"): \n")
+    add_line_to_file("test.txt", "      Interação "+str(iteracoes[0])+": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[1], iteracoes[0], alphas[2]), build_sets("zoo.txt")[1])
-    add_line_to_file("test.txt", "      Interação 200: \n")
+    add_line_to_file("test.txt", "      Interação " + str(iteracoes[1]) + ": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[1], iteracoes[1], alphas[2]), build_sets("zoo.txt")[1])
-    add_line_to_file("test.txt", "      Interação 300: \n")
+    add_line_to_file("test.txt", "      Interação "+str(iteracoes[2])+": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[1], iteracoes[2], alphas[2]), build_sets("zoo.txt")[1])
+    add_line_to_file("test.txt", "\n")
+    add_line_to_file("test.txt", "\n")
 
     # Configuração 3
-    add_line_to_file("test.txt", "Configuração 3: \n")
-    add_line_to_file("test.txt", "  Alpha 1: \n")
-    add_line_to_file("test.txt", "      Interação 100: \n")
+    add_line_to_file("test.txt", "Configuração 3 ( "+str(conf[2])+" Unidades Camada Escondida): \n" )
+    add_line_to_file("test.txt", "  Alpha 1 ("+str(alphas[0])+"): \n")
+    add_line_to_file("test.txt", "      Interação "+str(iteracoes[0])+": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[2], iteracoes[0], alphas[0]), build_sets("zoo.txt")[1])
-    add_line_to_file("test.txt", "      Interação 200: \n")
+    add_line_to_file("test.txt", "      Interação " + str(iteracoes[1]) + ": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[2], iteracoes[1], alphas[0]), build_sets("zoo.txt")[1])
-    add_line_to_file("test.txt", "      Interação 300: \n")
+    add_line_to_file("test.txt", "      Interação "+str(iteracoes[2])+": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[2], iteracoes[2], alphas[0]), build_sets("zoo.txt")[1])
 
-    add_line_to_file("test.txt", "Configuração 3: \n")
-    add_line_to_file("test.txt", "  Alpha 2: \n")
-    add_line_to_file("test.txt", "      Interação 100: \n")
+    add_line_to_file("test.txt", "\n" )
+    add_line_to_file("test.txt", "  Alpha 2 ("+str(alphas[1])+"): \n")
+    add_line_to_file("test.txt", "      Interação " + str(iteracoes[0]) + ": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[2], iteracoes[0], alphas[1]), build_sets("zoo.txt")[1])
-    add_line_to_file("test.txt", "      Interação 200: \n")
+    add_line_to_file("test.txt", "      Interação " + str(iteracoes[1]) + ": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[2], iteracoes[1], alphas[1]), build_sets("zoo.txt")[1])
-    add_line_to_file("test.txt", "      Interação 300: \n")
+    add_line_to_file("test.txt", "      Interação " + str(iteracoes[2]) + ": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[2], iteracoes[2], alphas[1]), build_sets("zoo.txt")[1])
 
-    add_line_to_file("test.txt", "Configuração 3: \n")
-    add_line_to_file("test.txt", "  Alpha 3: \n")
-    add_line_to_file("test.txt", "      Interação 100: \n")
+    add_line_to_file("test.txt", "\n" )
+    add_line_to_file("test.txt", "  Alpha 3 ("+str(alphas[2])+"): \n")
+    add_line_to_file("test.txt", "      Interação " + str(iteracoes[0]) + ": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[2], iteracoes[0], alphas[2]), build_sets("zoo.txt")[1])
-    add_line_to_file("test.txt", "      Interação 200: \n")
+    add_line_to_file("test.txt", "      Interação " + str(iteracoes[1]) + ": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[2], iteracoes[1], alphas[2]), build_sets("zoo.txt")[1])
-    add_line_to_file("test.txt", "      Interação 300: \n")
+    add_line_to_file("test.txt", "      Interação " + str(iteracoes[2]) + ": \n")
     test_zoo(train_zoo(build_sets("zoo.txt")[0], conf[2], iteracoes[2], alphas[2]), build_sets("zoo.txt")[1])
 
     
@@ -312,6 +317,7 @@ def translate(lista):
 
 def train_zoo(training_set, conf, iteracoes, alpha):
     """cria a rede e chama a funçao iterate para a treinar. Use 300 iteracoes"""
+
     net = make(len(training_set[0][1]), conf, len(training_set[0][-1]))
     for i in range(iteracoes):
         for animal in training_set:
@@ -334,6 +340,7 @@ def test_zoo(net, test_set):
     do animal que corresponde ao maior valor da lista de saida. O tipo determinado
     pela rede deve ser comparado com o tipo real, sendo contabilizado o número
     de respostas corretas. A função calcula a percentagem de respostas corretas"""
+
     numero_total_test_set = len(test_set)
     numero_acertos = 0
     i = 0
