@@ -9,9 +9,8 @@ alpha = 0.2
 tipo_animal = ['mammal', 'bird', 'reptile', 'fish', 'amphibian', 'insect', 'invertebrate']
 
 
-#TODO Passar parametros por argumento
-conf = [11, 27, 53]
-alphas = [0.2, 0.5, 0.7]
+conf = [14, 16, 18]
+alphas = [0.1, 0.3, 0.5]
 iteracoes = [100, 200, 300]
 
 def make(nx, nz, ny):
@@ -251,6 +250,7 @@ def build_sets(f):
                     animal[idxAtributo] = int(animal[idxAtributo])
 
         padroes = translate(animais)
+        random.shuffle(padroes)
         training_set = padroes[0:68]
         test_set = padroes[68:len(padroes)]
 

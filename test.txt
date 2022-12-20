@@ -1,72 +1,72 @@
 Configuração 1: 
   Alpha 1: 
       Interação 100: 
-		TAXA DE ACERTO: 78.79
+		TAXA DE ACERTO: 87.88
       Interação 200: 
-		TAXA DE ACERTO: 78.79
+		TAXA DE ACERTO: 96.97
       Interação 300: 
-		TAXA DE ACERTO: 78.79
+		TAXA DE ACERTO: 100.0
 Configuração 1: 
   Alpha 2: 
       Interação 100: 
-		TAXA DE ACERTO: 81.82
+		TAXA DE ACERTO: 100.0
       Interação 200: 
-		TAXA DE ACERTO: 78.79
+		TAXA DE ACERTO: 100.0
       Interação 300: 
-		TAXA DE ACERTO: 81.82
+		TAXA DE ACERTO: 100.0
 Configuração 1: 
   Alpha 3: 
       Interação 100: 
-		TAXA DE ACERTO: 78.79
+		TAXA DE ACERTO: 96.97
       Interação 200: 
-		TAXA DE ACERTO: 81.82
+		TAXA DE ACERTO: 100.0
       Interação 300: 
-		TAXA DE ACERTO: 81.82
+		TAXA DE ACERTO: 93.94
 Configuração 2: 
   Alpha 1: 
       Interação 100: 
-		TAXA DE ACERTO: 78.79
+		TAXA DE ACERTO: 90.91
       Interação 200: 
-		TAXA DE ACERTO: 81.82
+		TAXA DE ACERTO: 96.97
       Interação 300: 
-		TAXA DE ACERTO: 81.82
+		TAXA DE ACERTO: 100.0
 Configuração 2: 
   Alpha 2: 
       Interação 100: 
-		TAXA DE ACERTO: 81.82
+		TAXA DE ACERTO: 90.91
       Interação 200: 
-		TAXA DE ACERTO: 81.82
+		TAXA DE ACERTO: 96.97
       Interação 300: 
-		TAXA DE ACERTO: 81.82
+		TAXA DE ACERTO: 100.0
 Configuração 2: 
   Alpha 3: 
       Interação 100: 
-		TAXA DE ACERTO: 81.82
+		TAXA DE ACERTO: 96.97
       Interação 200: 
-		TAXA DE ACERTO: 81.82
+		TAXA DE ACERTO: 93.94
       Interação 300: 
-		TAXA DE ACERTO: 81.82
+		TAXA DE ACERTO: 100.0
 Configuração 3: 
   Alpha 1: 
       Interação 100: 
-		TAXA DE ACERTO: 78.79
+		TAXA DE ACERTO: 90.91
       Interação 200: 
-		TAXA DE ACERTO: 81.82
+		TAXA DE ACERTO: 100.0
       Interação 300: 
-		TAXA DE ACERTO: 81.82
+		TAXA DE ACERTO: 100.0
 Configuração 3: 
   Alpha 2: 
       Interação 100: 
-		TAXA DE ACERTO: 81.82
+		TAXA DE ACERTO: 96.97
       Interação 200: 
-		TAXA DE ACERTO: 81.82
+		TAXA DE ACERTO: 96.97
       Interação 300: 
-		TAXA DE ACERTO: 81.82
+		TAXA DE ACERTO: 100.0
 Configuração 3: 
   Alpha 3: 
       Interação 100: 
-		TAXA DE ACERTO: 81.82
+		TAXA DE ACERTO: 100.0
       Interação 200: 
-		TAXA DE ACERTO: 81.82
+		TAXA DE ACERTO: 96.97
       Interação 300: 
-		TAXA DE ACERTO: 81.82
+		TAXA DE ACERTO: 96.97
